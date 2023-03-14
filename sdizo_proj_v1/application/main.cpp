@@ -1,14 +1,17 @@
 #include <iostream>
-#include "../tablica_dym/TabDym.h"
+#include <conio.h>
+#include "../tablica_dym/Array.h"
 #include "../lista_dwu/DoubleList.h"
-#include "../kopiec_bin/KopiecBin.h"
+#include "../kopiec_bin/Heap.h"
 #include "../bst_tree/BST.h"
+#include "../black_and_red_tree/RBT.h"
 
 void menu();
 void tab_menu();
 void list_menu();
 void kopiec_menu();
 void bst_menu();
+void black_and_red_menu();
 
 int main() {
 
@@ -38,6 +41,10 @@ int main() {
                 //implementacja drzewa bst
                 bst_menu();
                 break;
+            case 5:
+                //implementacja drzewa czerwono-czarnego
+                black_and_red_menu();
+                break;
             case 0:
                 exit(0);
 
@@ -55,11 +62,12 @@ void menu(){
     std::cout << "1. Tablica dynamiczna" << std::endl;
     std::cout << "2. Lista dwukierukowa" << std::endl;
     std::cout << "3. Kopiec binarny" << std::endl;
+    std::cout << "4. BST" << std::endl;
     std::cout << "0. Koniec programu" << std::endl;
 }
 
 void tab_menu(){
-    auto * array = new TabDym();
+    auto * array = new Array();
 
     int num_arr;
     array -> display();
@@ -278,7 +286,7 @@ void list_menu(){
 
 void kopiec_menu(){
 
-    auto * heap = new KopiecBin();
+    auto * heap = new Heap();
     heap ->add_element(5);
     heap ->add_element(6);
     heap ->add_element(4);
@@ -308,16 +316,63 @@ void bst_menu(){
 
     auto * bst = new BST();
 
-    bst ->add_element(5);
-    bst ->add_element(51);
-    bst ->add_element(17);
-    bst ->add_element(1);
-    bst ->add_element(1);
+    bst ->add_element(10);
     bst ->add_element(4);
+    bst ->add_element(8);
+    bst ->add_element(7);
+    bst ->add_element(3);
+    bst ->add_element(2);
+    bst ->add_element(5);
+    bst ->add_element(11);
+    bst ->add_element(1);
+    bst ->add_element(17);
+    bst ->add_element(22);
+    bst ->add_element(6);
+    bst ->add_element(5);
+    bst ->add_element(4);
+    bst ->add_element(4);
+    bst ->display("","",bst -> get_head());
+
+    //bst ->remove_element(3);
+    //bst ->display("","",bst -> get_head());
+
+//    bst ->roted_right(bst ->find_value(5));
+//    bst ->roted_right(bst ->find_value(7));
+//    bst ->roted_right(bst ->find_value(2));
+//    bst ->roted_right(bst ->find_value(5));
+//    bst ->roted_right(bst ->find_value(3));
+
+//    bst ->roted_left(bst ->find_value(7));
+//    bst ->roted_left(bst ->find_value(5));
+//
+//    bst ->display("","",bst -> get_head());
+
+    bst -> dsw_alg();
 
     bst ->display("","",bst -> get_head());
+
+    system("pause");
+    system("cls");
 
 
     delete bst;
 
+}
+
+void black_and_red_menu(){
+
+    auto * rbt = new RBT();
+
+    rbt->add_element(5);
+    rbt->add_element(6);
+    rbt->add_element(10);
+    rbt->add_element(1);
+    rbt->add_element(1);
+    rbt->add_element(3);
+    rbt->add_element(15);
+    rbt->add_element(25);
+    rbt->add_element(8);
+    rbt->add_element(9);
+
+    delete rbt;
 }

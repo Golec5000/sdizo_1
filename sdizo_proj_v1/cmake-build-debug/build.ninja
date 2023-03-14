@@ -55,14 +55,14 @@ build CMakeFiles/sdizo_proj_v1.dir/application/main.cpp.obj: CXX_COMPILER__sdizo
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\application
 
-build CMakeFiles/sdizo_proj_v1.dir/tablica_dym/TabDym.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/tablica_dym/TabDym.cpp || cmake_object_order_depends_target_sdizo_proj_v1
-  DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\tablica_dym\TabDym.cpp.obj.d
+build CMakeFiles/sdizo_proj_v1.dir/tablica_dym/Array.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/tablica_dym/Array.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+  DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\tablica_dym\Array.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\tablica_dym
 
-build CMakeFiles/sdizo_proj_v1.dir/kopiec_bin/KopiecBin.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/kopiec_bin/KopiecBin.cpp || cmake_object_order_depends_target_sdizo_proj_v1
-  DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\kopiec_bin\KopiecBin.cpp.obj.d
+build CMakeFiles/sdizo_proj_v1.dir/kopiec_bin/Heap.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/kopiec_bin/Heap.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+  DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\kopiec_bin\Heap.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\kopiec_bin
@@ -91,6 +91,18 @@ build CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST_Node.cpp.obj: CXX_COMPILER__sdiz
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\bst_tree
 
+build CMakeFiles/sdizo_proj_v1.dir/black_and_red_tree/RBT.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/black_and_red_tree/RBT.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+  DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\black_and_red_tree\RBT.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+  OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
+  OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\black_and_red_tree
+
+build CMakeFiles/sdizo_proj_v1.dir/black_and_red_tree/RB_Node.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/black_and_red_tree/RB_Node.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+  DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\black_and_red_tree\RB_Node.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++11
+  OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
+  OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\black_and_red_tree
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sdizo_proj_v1
@@ -99,7 +111,7 @@ build CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST_Node.cpp.obj: CXX_COMPILER__sdiz
 #############################################
 # Link the executable sdizo_proj_v1.exe
 
-build sdizo_proj_v1.exe: CXX_EXECUTABLE_LINKER__sdizo_proj_v1_Debug CMakeFiles/sdizo_proj_v1.dir/application/main.cpp.obj CMakeFiles/sdizo_proj_v1.dir/tablica_dym/TabDym.cpp.obj CMakeFiles/sdizo_proj_v1.dir/kopiec_bin/KopiecBin.cpp.obj CMakeFiles/sdizo_proj_v1.dir/lista_dwu/Node.cpp.obj CMakeFiles/sdizo_proj_v1.dir/lista_dwu/DoubleList.cpp.obj CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST.cpp.obj CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST_Node.cpp.obj
+build sdizo_proj_v1.exe: CXX_EXECUTABLE_LINKER__sdizo_proj_v1_Debug CMakeFiles/sdizo_proj_v1.dir/application/main.cpp.obj CMakeFiles/sdizo_proj_v1.dir/tablica_dym/Array.cpp.obj CMakeFiles/sdizo_proj_v1.dir/kopiec_bin/Heap.cpp.obj CMakeFiles/sdizo_proj_v1.dir/lista_dwu/Node.cpp.obj CMakeFiles/sdizo_proj_v1.dir/lista_dwu/DoubleList.cpp.obj CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST.cpp.obj CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST_Node.cpp.obj CMakeFiles/sdizo_proj_v1.dir/black_and_red_tree/RBT.cpp.obj CMakeFiles/sdizo_proj_v1.dir/black_and_red_tree/RB_Node.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
