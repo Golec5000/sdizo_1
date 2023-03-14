@@ -106,7 +106,8 @@ void DoubleList::add_bottom(int index, int number) {
             counter++;
             p = p -> next;
         }
-
+        //         e
+            // a -> b -> c-> d
         auto * s = p ->prev; // 2. który będzie przed nowywym węźle
 
         //przepinanie dla nowego węzłą
