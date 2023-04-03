@@ -1,7 +1,3 @@
-//
-// Created by danie on 08.03.2023.
-//
-
 #ifndef SDIZO_PROJ_V1_BST_NODE_H
 #define SDIZO_PROJ_V1_BST_NODE_H
 
@@ -13,6 +9,7 @@ public:
     BST_Node * left_child;
     BST_Node * right_child;
     int value;
+    ~BST_Node();
 
 };
 

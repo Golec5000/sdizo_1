@@ -13,7 +13,8 @@ void Array::add_head(int number) {
         if(temp_tab != nullptr){
 
             temp_tab[0] = number;
-            for(int i = 0; i < temp_size; i++) temp_tab[i + 1] = tab[i];
+            for(int i = 0; i < temp_size - 1; i++)
+                temp_tab[i + 1] = tab[i];
 
             delete [] tab;
             tab = temp_tab;
@@ -38,6 +39,7 @@ void Array::add_tail(int number) {
             for (int i = 0; i < size_tab; ++i) {
                 temp_tab[i] = tab[i];
             }
+
             temp_tab[size_tab] = number;
 
             delete[] tab;
@@ -63,10 +65,13 @@ void Array::add_bottom(int index, int number) {
 
             if(temp_tab != nullptr) {
 
-                //dodanie nowego elementu do tablicy będące na innej pozycji niż koniec i początek
-                for (int i = 0; i < index; i++) temp_tab[i] = tab[i];//przepisanie lewej strony strony satrej tablicy do momętu zmiany
-                temp_tab[index] = number; // dopisanie nowego elemetu we skazanym mniejscu
-                for (int i = index; i < temp_size; i++) temp_tab[i + 1] = tab[i]; // przepisanie prawej strony starej toblicy do nowej po wprowadzeniu zmiany
+
+                for(int i = 0 ; i < temp_size - 1; i++ ){
+
+                    if(i >= index) temp_tab[i+1] = tab[i];
+                    else temp_tab[i] = tab[i];
+
+                }
 
                 delete[] tab;
                 tab = temp_tab;// przpisanie nowej tablicy
@@ -87,14 +92,14 @@ int Array::search(int number) {
     return num_index;
 }
 
-void Array::remove(int number) {
+void Array::remove(int index) {
 
     if(size_tab < 2) remove_if_one_or_zero();
     else{
 
-        int index = search(number);
-
-        if (index != -1){
+        if(index <= 0) remove_head();
+        else if(index >= size_tab - 1) remove_tail();
+        else{
 
             int * temp_tab = nullptr;
             long temp_size = size_tab - 1;
@@ -102,14 +107,19 @@ void Array::remove(int number) {
 
             if (temp_tab != nullptr){
 
-                for(int i = 0; i < index; i ++ ) temp_tab[i] = tab[i];
-                for(int i = index; i < temp_size; i++) temp_tab[i] = tab[i + 1];
+                for(int i = 0; i < temp_size; i ++ ) {
+
+                    if(i >= index) temp_tab[i-1] = tab[i];
+                    else temp_tab[i] = tab[i];
+
+                }
 
                 delete[] tab;
                 tab = temp_tab;
                 size_tab = temp_size;
 
             }
+
 
         }
 
@@ -150,8 +160,8 @@ void Array::remove_tail() {
         temp_tab = new int [temp_size];
 
         if(temp_tab != nullptr){
+            for(int i = 0; i < temp_size; i++)temp_tab[i] = tab[i];
 
-            for(int i = 0; i < temp_size; i++) temp_tab[i] = tab[i];
 
             delete[] tab;
             tab = temp_tab;
@@ -191,9 +201,10 @@ void Array::display() {
 }
 
 void Array::remove_if_one_or_zero() {
-    if(get_size() == 0) std::cout << "nieda sie nic usunac bo tablica jest pusta !!" << std::endl;
+    if(get_size() == 0) return;
     else{
         delete [] tab;
+        tab = nullptr;
         size_tab = 0;
     }
 }

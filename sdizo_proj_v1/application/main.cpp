@@ -1,17 +1,33 @@
 #include <iostream>
-#include <conio.h>
 #include "../tablica_dym/Array.h"
 #include "../lista_dwu/DoubleList.h"
 #include "../kopiec_bin/Heap.h"
 #include "../bst_tree/BST.h"
 #include "../black_and_red_tree/RBT.h"
+#include "../tests/Test_array.h"
+#include "../tests/Test_list.h"
+#include "../tests/Test_heap.h"
+#include "../tests/Test_bst.h"
+#include "../tests/Test_rbt.h"
 
+
+//------------------------------------------------------------
 void menu();
 void tab_menu();
 void list_menu();
 void kopiec_menu();
 void bst_menu();
 void black_and_red_menu();
+
+//-------------------------------------------------------------
+void tests();
+void array_test();
+void list_test();
+void heap_test();
+void bst_test();
+void rb_test();
+
+//--------------------------------------------------------------
 
 int main() {
 
@@ -44,6 +60,11 @@ int main() {
             case 5:
                 //implementacja drzewa czerwono-czarnego
                 black_and_red_menu();
+                break;
+            case 10:
+                //implementacja testów
+                tests();
+
                 break;
             case 0:
                 exit(0);
@@ -79,7 +100,7 @@ void tab_menu(){
         std::cout << "3. Dodaj w srodku" << std::endl;
         std::cout << "4. Usun z tyly" << std::endl;
         std::cout << "5. Usun z przodu" << std::endl;
-        std::cout << "6. Usun wybrana liczbe" << std::endl;
+        std::cout << "6. Usun wybranego indeksu" << std::endl;
         std::cout << "7. Szukaj pozycji danej liczby" << std::endl;
         std::cout << "8. Rozmiar tablicy" << std::endl;
         std::cout << "0. Cofnij do menu glownego" << std::endl;
@@ -133,7 +154,7 @@ void tab_menu(){
 
                 break;
             case 6:
-                std::cout << "Podaj liczbe do usuniecia: ";
+                std::cout << "Podaj index do usuniecia: ";
                 std::cin >> number;
 
                 array ->remove(number);
@@ -166,6 +187,8 @@ void tab_menu(){
 
 
     } while (num_arr != 0);
+
+    delete array;
 
 }
 
@@ -259,15 +282,16 @@ void list_menu(){
                 std::cout << "Podaj liczbe do wyszukania: ";
                 std::cin >> number;
 
-                index = list ->search(number);
+                Node *node;
+                node = list->search(number);
 
-                if(index >=0 ) std::cout << "Liczba " << number << " ma indeks: " << index << std::endl;
+                if(node != nullptr ) std::cout << " Wartosc znaleziona " << std::endl;
                 else std::cout << "Nie ma takiej liczby" << std::endl;
 
                 break;
 
             case 8:
-                std::cout << "Lista ma rozmiar: " << list ->list_size() << std::endl;
+                std::cout << "Lista ma rozmiar: " << list ->get_size() << std::endl;
                 break;
 
             case 0:
@@ -297,15 +321,18 @@ void kopiec_menu(){
     heap ->add_element(2);
     heap ->add_element(1);
     heap ->add_element(4);
-    heap ->add_element(3);
-    heap ->add_element(6);
-    heap ->add_element(2);
-    heap ->add_element(4);
-    heap ->add_element(14);
-    heap ->display("","",0);
 
-    heap ->remove();
-    heap ->display("","",0);
+    heap->remove();
+    heap->remove();
+    heap->remove();
+    heap->remove();
+    heap->remove();
+    heap->remove();
+    heap->remove();
+    heap->remove();
+    heap->remove();
+    heap->remove();
+
 
 
     delete heap;
@@ -331,7 +358,7 @@ void bst_menu(){
     bst ->add_element(5);
     bst ->add_element(4);
     bst ->add_element(4);
-    bst ->display("","",bst -> get_head());
+    bst ->display_tree();
 
     //bst ->remove_element(3);
     //bst ->display("","",bst -> get_head());
@@ -349,7 +376,7 @@ void bst_menu(){
 
     bst -> dsw_alg();
 
-    bst ->display("","",bst -> get_head());
+    bst ->display_tree();
 
     system("pause");
     system("cls");
@@ -374,5 +401,272 @@ void black_and_red_menu(){
     rbt->add_element(8);
     rbt->add_element(9);
 
+    rbt->display_tree();
+
+    rbt->remove_element(25);
+    rbt->remove_element(5);
+    rbt->remove_element(9);
+    rbt->remove_element(10);
+    rbt->remove_element(3);
+
+    rbt->display_tree();
+
     delete rbt;
+}
+
+//--------------------------------------------------------------
+
+void tests(){
+    array_test();
+    //list_test();
+    //heap_test();
+    //bst_test();
+    //rb_test();
+}
+
+void array_test(){
+    auto * testArray = new Test_array();
+
+    int tmp_remove[20];
+    int tmp_add[20];
+
+    std::cout<<" Test : "<<std::endl;
+    for(int i = 1; i <= 20 ; i++) {
+        std::cout<<i<<"/20";
+
+        tmp_add[i-1] = testArray->add_test(10000);
+        std::cout<<"to clear";
+        tmp_remove[i-1] = testArray->clear_test(10000);
+        std::cout<<"clear";
+
+        std::cout<<std::endl;
+    }
+
+    float sum_add = 0, sum_rev = 0;
+
+    for(int i = 0; i < 20; i++){
+
+        sum_add += tmp_add[i];
+        sum_rev += tmp_remove[i];
+
+    }
+
+    std::cout<< "Dodawanie "<< sum_add/20 << " " << "Usuwanie "<< sum_rev/20<<std::endl;
+
+//    int tmp_search[20];
+//    std::cout<<" Test : "<<std::endl;
+//    for(int i = 1; i <= 20 ; i++) {
+//        std::cout<<i<<"/20";
+//
+//        tmp_search[i-1] = testArray->search_test(70000);
+//
+//        std::cout<<std::endl;
+//    }
+//
+//    float sum_search = 0;
+//
+//    for(int i = 0; i < 20; i++) sum_search += tmp_search[i];
+//
+//    std::cout << "Szaukanie : " << sum_search/20 << " [us]" << std::endl;
+
+    delete testArray;
+}
+
+void list_test(){
+
+    auto * testList = new Test_list();
+
+    int tmp_remove[20];
+    int tmp_add[20];
+
+    std::cout<<" Test : "<<std::endl;
+    for(int i = 1; i <= 20 ; i++) {
+        std::cout<<i<<". ";
+        tmp_add[i-1] = testList->add_elements(70000);
+        tmp_remove[i-1] = testList->clear(70000);
+        std::cout<<std::endl;
+    }
+
+    float sum_add = 0, sum_rev = 0;
+
+    for(int i = 0; i < 20; i++){
+
+        sum_add += tmp_add[i];
+        sum_rev += tmp_remove[i];
+
+    }
+
+    std::cout<< "Dodawanie "<< sum_add/20 << " " << "Usuwanie "<< sum_rev/20 << " ";
+
+//    int tmp_search[20];
+//    std::cout<<" Test : "<<std::endl;
+//    for(int i = 1; i <= 20 ; i++) {
+//        std::cout<<i<<"/20";
+//
+//        tmp_search[i-1] = testList->search_element(70000);
+//
+//        std::cout<<std::endl;
+//    }
+//
+//    float sum_search = 0;
+//
+//    for(int i = 0; i < 20; i++) sum_search += tmp_search[i];
+//
+//    std::cout << "Szaukanie : " << sum_search/20 << " [us]" << std::endl;
+
+
+    delete testList;
+
+}
+
+void heap_test(){
+
+    auto * testHeap = new Test_heap();
+
+//    int tmp_remove[20];
+//    int tmp_add[20];
+//
+//    std::cout<<" Test : "<<std::endl;
+//    for(int i = 1; i <= 20 ; i++) {
+//        std::cout<<i<<"/20";
+//        tmp_add[i-1] = testHeap->add_test(70000);
+//        tmp_remove[i-1] =testHeap->clear_test(70000);
+//        std::cout<<std::endl;
+//    }
+//
+//    float sum_add = 0, sum_rev = 0;
+//
+//    for(int i = 0; i < 20; i++){
+//
+//        sum_add += tmp_add[i];
+//        sum_rev += tmp_remove[i];
+//
+//    }
+//
+//    std::cout<< "Dodawanie "<< sum_add/20 << "[ms] " << "Usuwanie "<< sum_rev/20 << " [ms]";
+    int tmp_search[20];
+    std::cout<<" Test : "<<std::endl;
+    for(int i = 1; i <= 20 ; i++) {
+        std::cout<<i<<"/20";
+
+        tmp_search[i-1] = testHeap->search_test(70000);
+
+        std::cout<<std::endl;
+    }
+
+    float sum_search = 0;
+
+    for(int i = 0; i < 20; i++) sum_search += tmp_search[i];
+
+    std::cout << "Szaukanie : " << sum_search/20 << " [us]" << std::endl;
+
+    delete testHeap;
+}
+
+void bst_test(){
+
+    auto * testBst = new Test_bst();
+
+//    int tmp_remove[20];
+//    int tmp_add[20];
+//
+//    std::cout<<" Test : "<<std::endl;
+//    for(int i = 1; i <= 20 ; i++) {
+//        std::cout<<i<<"/20";
+//        tmp_add[i-1] = testBst->add_test(10000);
+//        tmp_remove[i-1] =testBst->clear_test(10000);
+//        std::cout<<std::endl;
+//    }
+//    float sum_add = 0, sum_rev = 0;
+//
+//    for(int i = 0; i < 20; i++){
+//
+//        sum_add += tmp_add[i];
+//        sum_rev += tmp_remove[i];
+//
+//    }
+//
+//    std::cout<< "Dodawanie "<< sum_add/20 << "[ms] " << "Usuwanie "<< sum_rev/20 << " [ms]";
+
+
+//    int tmp_dsw[20];
+//    std::cout<<" Test : "<<std::endl;
+//    for(int i = 1; i <= 20 ; i++) {
+//        std::cout<<i<<"/20";
+//
+//        tmp_dsw[i-1] = testBst->dsw_test(70000);
+//
+//        std::cout<<std::endl;
+//    }
+//
+//    float sum_dsw = 0;
+//
+//    for(int i = 0; i < 20; i++) sum_dsw += tmp_dsw[i];
+//
+//    std::cout << "Alg DSW : " << sum_dsw/20 << " [us]" << std::endl;
+
+    int tmp_search[20];
+    std::cout<<" Test : "<<std::endl;
+    for(int i = 1; i <= 20 ; i++) {
+        std::cout<<i<<"/20";
+
+        tmp_search[i-1] = testBst->search_test(70000);
+
+        std::cout<<std::endl;
+    }
+
+    float sum_dsw = 0;
+
+    for(int i = 0; i < 20; i++) sum_dsw += tmp_search[i];
+
+    std::cout << "Szukanie : " << sum_dsw/20 << " [ns]" << std::endl;
+
+    delete testBst;
+}
+
+void rb_test(){
+
+
+    auto * testrbt = new Test_rbt();
+
+//    int tmp_remove[20];
+//    int tmp_add[20];
+//
+//    std::cout<<" Test : "<<std::endl;
+//    for(int i = 1; i <= 20 ; i++) {
+//        std::cout<<i<<"/20";
+//        tmp_add[i-1] = testrbt->add_test(70000);
+//        tmp_remove[i-1] =testrbt->clear_test(70000);
+//        std::cout<<std::endl;
+//    }
+//    float sum_add = 0, sum_rev = 0;
+//
+//    for(int i = 0; i < 20; i++){
+//
+//        sum_add += tmp_add[i];
+//        sum_rev += tmp_remove[i];
+//
+//    }
+//
+//    std::cout<< "Dodawanie "<< sum_add/20 << "[ms] " << "Usuwanie "<< sum_rev/20 << " [ms]";
+
+    int tmp_search[20];
+    std::cout<<" Test : "<<std::endl;
+    for(int i = 1; i <= 20 ; i++) {
+        std::cout<<i<<"/20";
+
+        tmp_search[i-1] = testrbt->search_test(70000);
+
+        std::cout<<std::endl;
+    }
+
+    float sum_search = 0;
+
+    for(int i = 0; i < 20; i++) sum_search += tmp_search[i];
+
+    std::cout << "Szaukanie : " << sum_search/20 << " [us]" << std::endl;
+
+    delete testrbt;
+
+
 }

@@ -9,6 +9,7 @@ class DoubleList {
 private:
     Node * head;
     Node * tail;
+    long size;
 public:
     DoubleList();
     ~DoubleList();
@@ -16,12 +17,12 @@ public:
     void add_back(int number);
     void add_bottom(int index, int number);
     void display();
-    int list_size();
-    int search(int number);
+    Node * search(int number);
     void remove_front();
     void remove_back();
     void remove_by_index(int index);
     void display_back();
+    long get_size();
 };
 
 
