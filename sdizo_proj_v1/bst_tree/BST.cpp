@@ -242,3 +242,24 @@ void BST::dsw_alg() {
 
 
 }
+
+void BST::display_tree() {
+    display("","",head);
+}
+
+void BST::clear_tree(BST_Node *n) {
+
+    if(n != nullptr){
+
+        clear_tree(n->left_child);
+        clear_tree(n->right_child);
+
+        delete n;
+
+    }
+
+}
+
+BST::~BST() {
+    clear_tree(head);
+}

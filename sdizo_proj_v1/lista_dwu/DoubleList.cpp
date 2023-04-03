@@ -1,6 +1,6 @@
 #include "DoubleList.h"
 
-DoubleList::DoubleList() : head(nullptr), tail(nullptr){}
+DoubleList::DoubleList() : head(nullptr), tail(nullptr), size(0){}
 
 DoubleList::~DoubleList() {
 
@@ -9,6 +9,7 @@ DoubleList::~DoubleList() {
         delete head;
         head = p;
     }
+    size = 0;
 
 }
 
@@ -25,6 +26,8 @@ void DoubleList::add_front(int number) {
     if(new_node -> next != nullptr) new_node -> next -> prev = new_node;// jeśli tak to przypisujemy następnikowi nowy wzeł jako poprzednik do istsniejącego
     else tail = new_node;// jeśli nie ma to staje sie również ogonem
 
+    size++;
+
 }
 
 void DoubleList::add_back(int number) {
@@ -40,6 +43,7 @@ void DoubleList::add_back(int number) {
     if(new_node -> prev != nullptr) new_node -> prev -> next = new_node;// jeśli tak to przypisujemy poprzenikowi nowy wzeł jako natępnik istsniejącego
     else head = new_node;// jeśli nie ma to staje sie również głową
 
+    size++;
 
 }
 
@@ -58,42 +62,31 @@ void DoubleList::display() {
 
 }
 
-int DoubleList::list_size() {
-    int counter = 0;
-    Node * p = head;
+Node * DoubleList::search(int number) {
+    Node * h = head;
+    Node * t = tail;
 
-    while (p != nullptr){
-        counter ++;
-        p = p -> next;
-    }
+    while ( h != nullptr && t != nullptr){
 
-    return counter;
-}
+        if (h->value == number) return h;
+        if(t->value == number) return t;
+        if(h == t){
+            if(h->value == number) return h;
+            else return nullptr;
+        }
 
-int DoubleList::search(int number) {
-    //todo: zrobić wszykiwanie dwu kierunkowe
-    Node * p = head;
-    int counter = 0;
-    bool test = false;
-
-    while (p != nullptr){
-
-        if(p -> value == number){
-            test = true;
-            break;
-        } 
-        counter ++ ;
-        p = p -> next;
+        h = h->next;
+        t = t->prev;
 
     }
-    if(test) return counter;
-    else return -1;
+
+    return nullptr;
 }
 
 void DoubleList::add_bottom(int index, int number) {
 
     if(index <= 0) add_front(number);
-    else if(index >= list_size() - 1) add_back(number);
+    else if(index >= size - 1) add_back(number);
     else{
 
         auto * new_node = new Node();// nowy węzeł listy
@@ -115,31 +108,39 @@ void DoubleList::add_bottom(int index, int number) {
         new_node -> prev = s; // przypisanie nowemu węzłą porzedzającego
         p -> prev = new_node; // przypisanie węzłowi poprzedzającego nowego węzła
         s -> next = new_node; // przypisanie węzłowi nowego występującego po nim
-
+        size ++;
     }
 
 }
 
 void DoubleList::remove_front() {
 
-    if(list_size() == 0) return;
-    if(list_size() == 1) head = tail = nullptr;
+    if(size == 0) return;
+    if(size == 1) {
+        head = tail = nullptr;
+        size = 0;
+    }
     else{
         auto * p = head;
         head = p ->next;
         head -> prev = nullptr;
         delete p;
+        size--;
     }
 }
 
 void DoubleList::remove_back() {
-    if(list_size() == 0) return;
-    if(list_size() == 1 ) tail = head = nullptr;
+    if(size == 0) return;
+    if(size == 1 ) {
+        tail = head = nullptr;
+        size = 0;
+    }
     else{
         auto * p = tail;
         tail = p -> prev;
         tail -> next = nullptr;
         delete p;
+        size --;
     }
 
 }
@@ -148,7 +149,7 @@ void DoubleList::remove_by_index(int index) {
 
 
     if(index <= 0) remove_front();
-    else if (index >= list_size() - 1) remove_back();
+    else if (index >= size - 1) remove_back();
     else{
 
         auto * p = head;
@@ -163,7 +164,7 @@ void DoubleList::remove_by_index(int index) {
         p -> next -> prev = p -> prev;
 
         delete p;
-
+        size --;
 
     }
 
@@ -184,6 +185,10 @@ void DoubleList::display_back() {
     std::cout << "]" << std::endl;
 
 
+}
+
+long DoubleList::get_size() {
+    return size;
 }
 
 

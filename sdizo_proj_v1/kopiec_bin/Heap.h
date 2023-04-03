@@ -11,6 +11,7 @@ public:
     void display(std::string sp, std::string sn, int v);
     void add_element(int number);
     void remove();
+    int search(int num);
     ~Heap();
 
 private:
