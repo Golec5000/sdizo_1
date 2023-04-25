@@ -10,9 +10,8 @@ Test_rbt::~Test_rbt() {
 long long int Test_rbt::add_test(int n) {
     srand(time(NULL));
     QueryPerformanceFrequency((LARGE_INTEGER *)&frequency);
-    start = read_QPC();
 
-    for (int i = 0; i < n; i++) keys.push_back((std::rand()%1001)-500);
+    for(int i = 0; i < n ; i++) keys.push_back(std::rand()%100000);
 
     start = read_QPC();
 
@@ -30,11 +29,11 @@ long long int Test_rbt::clear_test(int n) {
     std::sort(keys.begin(),keys.end());
 
     start = read_QPC();
-
     for (int i = 0; i < n; i++) rbt->remove_element(keys[i]);
-
     elapsed = read_QPC() - start;
     keys.clear();
+
+
 
     return (1000.0 * elapsed) /frequency;
 }

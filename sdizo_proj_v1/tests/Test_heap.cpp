@@ -1,3 +1,4 @@
+#include <algorithm>
 #include "Test_heap.h"
 
 Test_heap::Test_heap() {}
@@ -10,11 +11,25 @@ Test_heap::~Test_heap() {
 long long int Test_heap::add_test(int n) {
     srand(time(NULL));
     QueryPerformanceFrequency((LARGE_INTEGER *)&frequency);
+
+    int  j = 0;
+    while (j < n){
+        int x = std::rand()%100000;
+
+        if (temp_tab.empty()) temp_tab.push_back(x);
+
+        if(!std::binary_search(temp_tab.begin(), temp_tab.end(), x)){
+            temp_tab.push_back(x);
+            j++;
+        }
+
+    }
+
+
     start = read_QPC();
 
-    for(int i = 0; i < n; i++){
-        heap ->add_element((std::rand()%1001)-500);
-    }
+    for(int i = 0; i < n; i++) heap->add_element(temp_tab[i]);
+
     elapsed = read_QPC() - start;
 
     return (1000.0 * elapsed) /frequency;
@@ -24,11 +39,14 @@ long long int Test_heap::add_test(int n) {
 long long int Test_heap::clear_test(int n) {
     srand(time(NULL));
     QueryPerformanceFrequency((LARGE_INTEGER *)&frequency);
+
     start = read_QPC();
+
     for(int i = 0; i < n; i++){
         heap ->remove();
     }
     elapsed = read_QPC() - start;
+    temp_tab.clear();
 
     return (1000.0 * elapsed) /frequency;
 

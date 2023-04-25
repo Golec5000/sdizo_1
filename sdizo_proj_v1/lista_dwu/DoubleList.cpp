@@ -12,7 +12,7 @@ DoubleList::~DoubleList() {
     size = 0;
 
 }
-
+// a - b - c - d - e
 void DoubleList::add_front(int number) {
 
     auto * new_node = new Node();//tworzymy nowy węzeł
@@ -48,7 +48,7 @@ void DoubleList::add_back(int number) {
 }
 
 void DoubleList::display() {
-
+    //wyświetla liste od przodu
     Node * p = head;
 
     std::cout << "[";
@@ -65,6 +65,9 @@ void DoubleList::display() {
 Node * DoubleList::search(int number) {
     Node * h = head;
     Node * t = tail;
+
+    //metoda korzysta z podwujnego piwota dzięki czemu czas wyszukiwani jest
+    //skócony który idzie o przodu i tyłu i każdy wędruje przez połowę z każdej strony
 
     while ( h != nullptr && t != nullptr){
 
@@ -115,27 +118,28 @@ void DoubleList::add_bottom(int index, int number) {
 
 void DoubleList::remove_front() {
 
-    if(size == 0) return;
-    if(size == 1) {
+    if(size == 0) return;       //jeśli nic nie ma usuwanie ma się nie wykonać
+    if(size == 1) {             //jeśli jest tylko 1 element to zerujemy rozmiar i głowę i ogon ustawiamy na NULL
         head = tail = nullptr;
         size = 0;
     }
-    else{
-        auto * p = head;
+    else{                               //jeśli rozmiar jest większy przesuwamy głowę na jej następnik
+        auto * p = head;            //poprzednik ustawiamy na null
         head = p ->next;
         head -> prev = nullptr;
-        delete p;
+        delete p;                                   //usuwamy węzeł i zmniejszamy rozmiar
         size--;
     }
 }
 
 void DoubleList::remove_back() {
-    if(size == 0) return;
+    if(size == 0) return;                   //początek taki sam jak w dodawaniu z przodu
     if(size == 1 ) {
         tail = head = nullptr;
         size = 0;
     }
-    else{
+    else{                                       // ten fragment jest odbiciem lustrzanym dla dodawania z przodu
+                                                // i operacji dokonojuemy na ogonie
         auto * p = tail;
         tail = p -> prev;
         tail -> next = nullptr;
@@ -148,21 +152,24 @@ void DoubleList::remove_back() {
 void DoubleList::remove_by_index(int index) {
 
 
-    if(index <= 0) remove_front();
-    else if (index >= size - 1) remove_back();
+    if(index <= 0) remove_front();      // zabezpiecznie przed podaniem indeksu mniejszego od 0
+    else if (index >= size - 1) remove_back();// zabezpiecznie przed podaniem indeksu większego od rozmiaru listy
     else{
 
         auto * p = head;
         int counter = 0;
 
+        //szukanie węzła do usunięcia
         while (p != nullptr && counter != index){
             counter++;
             p = p->next;
         }
 
+        //odpięcie znalezionego węzłą
         p -> prev -> next = p -> next;
         p -> next -> prev = p -> prev;
 
+        // usunięcie węzłą i zmnieszenie rozmiaru
         delete p;
         size --;
 
@@ -174,7 +181,7 @@ void DoubleList::remove_by_index(int index) {
 void DoubleList::display_back() {
 
     auto * p = tail;
-
+    //wyświetla liste od tyłu
     std::cout << "[";
     while (p != nullptr){
 
@@ -187,6 +194,7 @@ void DoubleList::display_back() {
 
 }
 
+//zwraca rozmiar listy
 long DoubleList::get_size() {
     return size;
 }

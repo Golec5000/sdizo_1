@@ -10,9 +10,19 @@ Test_bst::~Test_bst() {
 long long int Test_bst::add_test(int n) {
     srand(time(NULL));
     QueryPerformanceFrequency((LARGE_INTEGER *)&frequency);
-    start = read_QPC();
 
-    for (int i = 0; i < n; i++) keys.push_back((std::rand()%1001)-500);
+    int  j = 0;
+    while (j < n){
+        int x = std::rand()%100000;
+
+        if (keys.empty()) keys.push_back(x);
+
+        if(!std::binary_search(keys.begin(), keys.end(), x)){
+            keys.push_back(x);
+            j++;
+        }
+
+    }
 
     start = read_QPC();
 
@@ -59,7 +69,7 @@ long long int Test_bst::search_test(int n) {
     for (int i = 0; i < n; i++) bst->remove_element(keys[i]);
     keys.clear();
 
-    return (1000000.0 * elapsed) /frequency;
+    return (1000000000.0 * elapsed) /frequency;
 
 }
 
@@ -74,7 +84,18 @@ long long int Test_bst::dsw_test(int n) {
     srand(time(NULL));
     QueryPerformanceFrequency((LARGE_INTEGER *)&frequency);
 
-    for (int i = 0; i < n; i++) keys.push_back((std::rand()%1001)-500);
+    int  j = 0;
+    while (j < n){
+        int x = std::rand()%100000;
+
+        if (keys.empty()) keys.push_back(x);
+
+        if(!std::binary_search(keys.begin(), keys.end(), x)){
+            keys.push_back(x);
+            j++;
+        }
+
+    }
 
     for (int i = 0; i < n; i++) bst->add_element(keys[i]);
 

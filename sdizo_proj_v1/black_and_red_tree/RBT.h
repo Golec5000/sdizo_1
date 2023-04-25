@@ -12,10 +12,7 @@ public:
     void add_element(int key);
     void remove_element(int key);
     void display_tree();
-    RB_Node *  find_max();
-    RB_Node *  find_min();
     RB_Node * find_value(int key);
-    RB_Node * get_head();
     void roted_left(RB_Node * p);
     void roted_right(RB_Node * p);
 private:

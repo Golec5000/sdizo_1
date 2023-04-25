@@ -8,10 +8,11 @@ class Heap {
 
 public:
     Heap();
-    void display(std::string sp, std::string sn, int v);
+    void heap_dispaly();
     void add_element(int number);
     void remove();
     int search(int num);
+    int size_heap();
     ~Heap();
 
 private:
@@ -19,7 +20,7 @@ private:
     int parent(int index);
     //zminne do rysowania
     std::string cr,cl,cp;
-
+    void display(std::string sp, std::string sn, int v);
 };
 
 

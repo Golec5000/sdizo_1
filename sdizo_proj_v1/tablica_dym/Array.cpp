@@ -70,8 +70,9 @@ void Array::add_bottom(int index, int number) {
 
                     if(i >= index) temp_tab[i+1] = tab[i];
                     else temp_tab[i] = tab[i];
-
                 }
+
+                temp_tab[index] = number;
 
                 delete[] tab;
                 tab = temp_tab;// przpisanie nowej tablicy
@@ -109,7 +110,7 @@ void Array::remove(int index) {
 
                 for(int i = 0; i < temp_size; i ++ ) {
 
-                    if(i >= index) temp_tab[i-1] = tab[i];
+                    if(i >= index) temp_tab[i] = tab[i + 1];
                     else temp_tab[i] = tab[i];
 
                 }
@@ -160,10 +161,10 @@ void Array::remove_tail() {
         temp_tab = new int [temp_size];
 
         if(temp_tab != nullptr){
+
             for(int i = 0; i < temp_size; i++)temp_tab[i] = tab[i];
-
-
             delete[] tab;
+
             tab = temp_tab;
             size_tab = temp_size;
 

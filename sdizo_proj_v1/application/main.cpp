@@ -36,30 +36,35 @@ int main() {
     do{
         menu();
         std::cin >> num;
-
+        system("cls");
         switch (num) {
 
             case 1:
                 //implementacja tablicy
                 tab_menu();
+                system("cls");
                 break;
 
             case 2:
                 //implementacji listy
                 list_menu();
+                system("cls");
                 break;
 
             case 3:
                 //implementacja kopca
                 kopiec_menu();
+                system("cls");
                 break;
             case 4:
                 //implementacja drzewa bst
                 bst_menu();
+                system("cls");
                 break;
             case 5:
                 //implementacja drzewa czerwono-czarnego
                 black_and_red_menu();
+                system("cls");
                 break;
             case 10:
                 //implementacja testów
@@ -71,6 +76,8 @@ int main() {
 
             default:
                 std::cout << "Brak takiej opcji" << std::endl;
+                system("pause");
+                system("cls");
                 break;
         }
     } while (num);
@@ -83,7 +90,8 @@ void menu(){
     std::cout << "1. Tablica dynamiczna" << std::endl;
     std::cout << "2. Lista dwukierukowa" << std::endl;
     std::cout << "3. Kopiec binarny" << std::endl;
-    std::cout << "4. BST" << std::endl;
+    std::cout << "4. Drzewo przeszukiwan binarnych (BST)" << std::endl;
+    std::cout << "5. Drzewo czerwone-czarne" << std::endl;
     std::cout << "0. Koniec programu" << std::endl;
 }
 
@@ -91,9 +99,12 @@ void tab_menu(){
     auto * array = new Array();
 
     int num_arr;
-    array -> display();
 
     do {
+        std::cout << "Struktura tablicy: " << std::endl;
+        array -> display();
+        std::cout << "\n--------------------------------------------------------------" << std::endl;
+
         std::cout << "Wybierz operacje na tablicy dynamicznej" << std::endl;
         std::cout << "1. Dodaj z tyly" << std::endl;
         std::cout << "2. Dodaj z porzodu" << std::endl;
@@ -109,14 +120,14 @@ void tab_menu(){
 
         std::cout << "Podaj numer operacji: ";
         std::cin >> num_arr;
+        system("cls");
 
         switch (num_arr) {
             case 1:
                 std::cout << "Podaj liczbe do wpisania: ";
                 std::cin >> number;
-
                 array -> add_tail(number);
-                array -> display();
+                system("cls");
 
                 break;
 
@@ -124,9 +135,8 @@ void tab_menu(){
 
                 std::cout << "Podaj liczbe do wpisania: ";
                 std::cin >> number;
-
                 array ->add_head(number);
-                array -> display();
+                system("cls");
 
                 break;
             case 3:
@@ -137,20 +147,20 @@ void tab_menu(){
                 std::cin >> index;
 
                 array ->add_bottom(index,number);
-                array -> display();
+                system("cls");
 
                 break;
             case 4:
 
                 array -> remove_tail();
-                array -> display();
+                system("cls");
 
                 break;
 
             case 5:
 
                 array -> remove_head();
-                array -> display();
+                system("cls");
 
                 break;
             case 6:
@@ -158,7 +168,7 @@ void tab_menu(){
                 std::cin >> number;
 
                 array ->remove(number);
-                array -> display();
+                system("cls");
 
                 break;
             case 7:
@@ -170,18 +180,22 @@ void tab_menu(){
 
                 if(index == -1) std::cout << "W tablicy nie ma takiej liczby !"<< std::endl;
                 else std::cout << "Pozycja liczby " << number << " wynosi: " << index << std::endl;
-
+                system("pause");
+                system("cls");
                 break;
 
             case 8:
 
                 std::cout << "Rozmiar tablicy wynosi: " << array -> get_size() << std::endl;
-
+                system("pause");
+                system("cls");
                 break;
             case 0:
                 break;
             default:
                 std::cout << "Brak takiej opcji ! "<< std::endl;
+                system("pause");
+                system("cls");
                 break;
         }
 
@@ -197,11 +211,18 @@ void list_menu(){
     auto * list = new DoubleList();
 
     int num_list;
-    list -> display();
 
     do{
 
-        std::cout << "Wybierz operacje na tablicy dynamicznej" << std::endl;
+        std::cout<<"Lista wyswietlana od przodu"<<std::endl;
+        list -> display();
+
+        std::cout<<"Lista wyswietlana od tylu"<<std::endl;
+        list->display_back();
+
+        std::cout << "\n--------------------------------------------------------------" << std::endl;
+
+        std::cout << "Wybierz operacje na liście dwukierunkowej" << std::endl;
         std::cout << "1. Dodaj z tyly" << std::endl;
         std::cout << "2. Dodaj z porzodu" << std::endl;
         std::cout << "3. Dodaj pod dany indeks" << std::endl;
@@ -216,6 +237,7 @@ void list_menu(){
 
         std::cout << "Podaj numer operacji: ";
         std::cin >> num_list;
+        system("cls");
 
         switch (num_list) {
             case 1:
@@ -224,8 +246,7 @@ void list_menu(){
                 std::cin >> number;
 
                 list ->add_back(number);
-                list -> display();
-                list -> display_back();
+                system("cls");
 
                 break;
 
@@ -235,9 +256,7 @@ void list_menu(){
                 std::cin >> number;
 
                 list ->add_front(number);
-                list -> display();
-                list -> display_back();
-
+                system("cls");
                 break;
 
             case 3:
@@ -249,22 +268,21 @@ void list_menu(){
                 std::cin >> index;
 
                 list ->add_bottom(index,number);
-                list -> display();
-                list -> display_back();
+                system("cls");
 
                 break;
 
             case 4:
 
                 list -> remove_front();
-                list ->display_back();
+                system("cls");
 
                 break;
 
             case 5:
 
                 list -> remove_back();
-                list ->display();
+                system("cls");
 
                 break;
 
@@ -274,7 +292,7 @@ void list_menu(){
                 std::cin >> index;
 
                 list ->remove_by_index(index);
-                list -> display();
+                system("cls");
 
                 break;
             case 7:
@@ -284,14 +302,18 @@ void list_menu(){
 
                 Node *node;
                 node = list->search(number);
-
+                system("cls");
                 if(node != nullptr ) std::cout << " Wartosc znaleziona " << std::endl;
                 else std::cout << "Nie ma takiej liczby" << std::endl;
 
+                system("pause");
+                system("cls");
                 break;
 
             case 8:
                 std::cout << "Lista ma rozmiar: " << list ->get_size() << std::endl;
+                system("pause");
+                system("cls");
                 break;
 
             case 0:
@@ -299,6 +321,8 @@ void list_menu(){
 
             default:
                 std::cout << "Brak takiej opcji !" << std::endl;
+                system("pause");
+                system("cls");
                 break;
         }
 
@@ -311,28 +335,82 @@ void list_menu(){
 void kopiec_menu(){
 
     auto * heap = new Heap();
-    heap ->add_element(5);
-    heap ->add_element(6);
-    heap ->add_element(4);
-    heap ->add_element(6);
-    heap ->add_element(6);
-    heap ->add_element(7);
-    heap ->add_element(8);
-    heap ->add_element(2);
-    heap ->add_element(1);
-    heap ->add_element(4);
 
-    heap->remove();
-    heap->remove();
-    heap->remove();
-    heap->remove();
-    heap->remove();
-    heap->remove();
-    heap->remove();
-    heap->remove();
-    heap->remove();
-    heap->remove();
+    int num_heap;
 
+    do{
+
+        std::cout << "Struktura kopca:" << std::endl;
+        heap->heap_dispaly();
+
+        std::cout << "\n--------------------------------------------------------------" << std::endl;
+
+        std::cout << "Wybierz operacje na kopcu binarnym" << std::endl;
+        std::cout << "1. Dodaj element" << std::endl;
+        std::cout << "2. Usun element" << std::endl;
+        std::cout << "3. Szukaj pozycji danej liczby" << std::endl;
+        std::cout << "4. Rozmiar kopca" << std::endl;
+        std::cout << "0. Cofnij do menu glownego" << std::endl;
+
+        std::cin >> num_heap;
+
+        system("cls");
+
+        switch (num_heap) {
+
+            int number;
+
+            case 1:
+                std::cout << "Podaj liczbe do wpisania: ";
+                std::cin>>number;
+
+                heap->add_element(number);
+
+                system("cls");
+
+                break;
+            case 2:
+
+                heap->remove();
+
+                system("cls");
+
+                break;
+            case 3:
+
+                std::cout << "Podaj liczbę do wyszukania: ";
+                std::cin>>number;
+
+                int index;
+                index = heap->search(number);
+
+                if (index > -1) std::cout << "Element znaleziony pod indeksem: " << index << std::endl;
+                else std::cout << "Brak podanego elementu: " << std::endl;
+
+                system("pause");
+                system("cls");
+
+                break;
+            case 4:
+
+                std::cout << "Rozmiar kopca wynosi: " << heap->size_heap() << std::endl;
+
+                system("pause");
+                system("cls");
+
+                break;
+            case 0:
+                break;
+            default:
+
+                std::cout << "Brak takiej opcji !" << std::endl;
+                system("pause");
+                system("cls");
+
+                break;
+        }
+
+    } while (num_heap != 0);
 
 
     delete heap;
@@ -343,43 +421,101 @@ void bst_menu(){
 
     auto * bst = new BST();
 
-    bst ->add_element(10);
-    bst ->add_element(4);
-    bst ->add_element(8);
-    bst ->add_element(7);
-    bst ->add_element(3);
-    bst ->add_element(2);
-    bst ->add_element(5);
-    bst ->add_element(11);
-    bst ->add_element(1);
-    bst ->add_element(17);
-    bst ->add_element(22);
-    bst ->add_element(6);
-    bst ->add_element(5);
-    bst ->add_element(4);
-    bst ->add_element(4);
-    bst ->display_tree();
+    int num_bst;
 
-    //bst ->remove_element(3);
-    //bst ->display("","",bst -> get_head());
+    do{
 
-//    bst ->roted_right(bst ->find_value(5));
-//    bst ->roted_right(bst ->find_value(7));
-//    bst ->roted_right(bst ->find_value(2));
-//    bst ->roted_right(bst ->find_value(5));
-//    bst ->roted_right(bst ->find_value(3));
+        std::cout << "Struktura bst:" << std::endl;
+        bst->display_tree();
 
-//    bst ->roted_left(bst ->find_value(7));
-//    bst ->roted_left(bst ->find_value(5));
-//
-//    bst ->display("","",bst -> get_head());
+        std::cout << "\n--------------------------------------------------------------" << std::endl;
 
-    bst -> dsw_alg();
+        std::cout << "Wybierz operacje na BST" << std::endl;
+        std::cout << "1. Dodaj element" << std::endl;
+        std::cout << "2. Usun element" << std::endl;
+        std::cout << "3. Szukaj danego klucza" << std::endl;
+        std::cout << "4. DSW" << std::endl;
+        std::cout << "5. Rotuj w prawo" << std::endl;
+        std::cout << "6. Rotuj w lewo" << std::endl;
+        std::cout << "0. Cofnij do menu glownego" << std::endl;
 
-    bst ->display_tree();
+        std::cin>> num_bst;
 
-    system("pause");
-    system("cls");
+        switch (num_bst) {
+
+            int number;
+
+            case 1:
+
+                std::cout << "Podaj liczbe do wpisania: ";
+                std::cin>>number;
+
+                bst->add_element(number);
+
+                system("cls");
+
+                break;
+            case 2:
+
+                std::cout << "Podaj liczbe do usuniecia: ";
+                std::cin>>number;
+
+                bst->remove_element(number);
+
+                system("cls");
+
+                break;
+            case 3:
+
+                std::cout << "Podaj liczbe do znalezienia: ";
+                std::cin>>number;
+
+                BST_Node * node;
+                node = bst->find_value(number);
+
+                if (node != nullptr) std::cout << "Wartość szukana znaleziona "<< std::endl;
+                else std::cout << "Brak danego elementu "<< std::endl;
+
+                system("pause");
+                system("cls");
+
+                break;
+
+            case 4:
+
+                bst->dsw_alg();
+                system("cls");
+                break;
+            case 5:
+
+                std::cout << "Podaj liczbe do obrotu w prawo: ";
+                std::cin>>number;
+
+                BST_Node * node_rot_right;
+                node_rot_right = bst->find_value(number);
+
+                if(node_rot_right != nullptr) bst->roted_right(node_rot_right);
+
+                system("cls");
+
+                break;
+            case 6:
+
+                std::cout << "Podaj liczbe do obrotu w lewo: ";
+                std::cin>>number;
+
+                BST_Node * node_rot_left;
+                node_rot_left = bst->find_value(number);
+
+                if(node_rot_left != nullptr) bst->roted_right(node_rot_left);
+
+                system("cls");
+
+                break;
+
+        }
+
+    } while (num_bst != 0);
 
 
     delete bst;
@@ -390,26 +526,69 @@ void black_and_red_menu(){
 
     auto * rbt = new RBT();
 
-    rbt->add_element(5);
-    rbt->add_element(6);
-    rbt->add_element(10);
-    rbt->add_element(1);
-    rbt->add_element(1);
-    rbt->add_element(3);
-    rbt->add_element(15);
-    rbt->add_element(25);
-    rbt->add_element(8);
-    rbt->add_element(9);
+    int num_rbt;
 
-    rbt->display_tree();
+    do{
 
-    rbt->remove_element(25);
-    rbt->remove_element(5);
-    rbt->remove_element(9);
-    rbt->remove_element(10);
-    rbt->remove_element(3);
+        std::cout << "Struktura drzewa czerwono-czarnego:" << std::endl;
+        rbt->display_tree();
 
-    rbt->display_tree();
+        std::cout << "\n--------------------------------------------------------------" << std::endl;
+
+        std::cout << "Wybierz operacje na drzewie czerwono-czarnym" << std::endl;
+        std::cout << "1. Dodaj element" << std::endl;
+        std::cout << "2. Usun element" << std::endl;
+        std::cout << "3. Szukaj danego klucza" << std::endl;
+        std::cout << "0. Cofnij do menu glownego" << std::endl;
+
+        std::cin>> num_rbt;
+
+        switch (num_rbt) {
+
+            int number;
+
+            case 1:
+
+                std::cout << "Podaj liczbe do wpisania: ";
+                std::cin>>number;
+
+                rbt->add_element(number);
+
+                system("cls");
+
+                break;
+            case 2:
+
+                std::cout << "Podaj liczbe do usuniecia: ";
+                std::cin>>number;
+
+                rbt->remove_element(number);
+
+                system("cls");
+
+                break;
+            case 3:
+
+                std::cout << "Podaj liczbe do znalezienia: ";
+                std::cin>>number;
+
+                RB_Node * node;
+                node = rbt->find_value(number);
+
+                if (node != nullptr) std::cout << "Wartość szukana znaleziona "<< std::endl;
+                else std::cout << "Brak danego elementu "<< std::endl;
+
+                system("pause");
+                system("cls");
+
+                break;
+            default:
+                system("cls");
+                break;
+
+        }
+
+    } while (num_rbt != 0);
 
     delete rbt;
 }
@@ -417,57 +596,59 @@ void black_and_red_menu(){
 //--------------------------------------------------------------
 
 void tests(){
-    array_test();
+    //array_test();
     //list_test();
     //heap_test();
     //bst_test();
-    //rb_test();
+    rb_test();
 }
 
 void array_test(){
     auto * testArray = new Test_array();
 
-    int tmp_remove[20];
-    int tmp_add[20];
+    std::cout<<"Podaj ilość elementów:";
+    int c;
+    std::cin >> c;
 
-    std::cout<<" Test : "<<std::endl;
-    for(int i = 1; i <= 20 ; i++) {
-        std::cout<<i<<"/20";
-
-        tmp_add[i-1] = testArray->add_test(10000);
-        std::cout<<"to clear";
-        tmp_remove[i-1] = testArray->clear_test(10000);
-        std::cout<<"clear";
-
-        std::cout<<std::endl;
-    }
-
-    float sum_add = 0, sum_rev = 0;
-
-    for(int i = 0; i < 20; i++){
-
-        sum_add += tmp_add[i];
-        sum_rev += tmp_remove[i];
-
-    }
-
-    std::cout<< "Dodawanie "<< sum_add/20 << " " << "Usuwanie "<< sum_rev/20<<std::endl;
-
-//    int tmp_search[20];
+//    int tmp_remove[20];
+//    int tmp_add[20];
+//
 //    std::cout<<" Test : "<<std::endl;
 //    for(int i = 1; i <= 20 ; i++) {
 //        std::cout<<i<<"/20";
 //
-//        tmp_search[i-1] = testArray->search_test(70000);
+//        tmp_add[i-1] = testArray->add_test(c);
+//        tmp_remove[i-1] = testArray->clear_test(c);
 //
 //        std::cout<<std::endl;
 //    }
 //
-//    float sum_search = 0;
+//    float sum_add = 0, sum_rev = 0;
 //
-//    for(int i = 0; i < 20; i++) sum_search += tmp_search[i];
+//    for(int i = 0; i < 20; i++){
 //
-//    std::cout << "Szaukanie : " << sum_search/20 << " [us]" << std::endl;
+//        sum_add += tmp_add[i];
+//        sum_rev += tmp_remove[i];
+//
+//    }
+//
+//    std::cout<< "Dodawanie "<< sum_add/20 << " " << "Usuwanie "<< sum_rev/20<<std::endl;
+
+    int tmp_search[20];
+    std::cout<<" Test : "<<std::endl;
+    for(int i = 1; i <= 20 ; i++) {
+        std::cout<<i<<"/20";
+
+        tmp_search[i-1] = testArray->search_test(c);
+
+        std::cout<<std::endl;
+    }
+
+    float sum_search = 0;
+
+    for(int i = 0; i < 20; i++) sum_search += tmp_search[i];
+
+    std::cout << "Szaukanie : " << sum_search/20 << " [us]" << std::endl;
 
     delete testArray;
 }
@@ -475,6 +656,10 @@ void array_test(){
 void list_test(){
 
     auto * testList = new Test_list();
+    std::cout<<"Podaj ilosc elementów:";
+    int c;
+    std::cin >> c;
+
 
     int tmp_remove[20];
     int tmp_add[20];
@@ -482,8 +667,8 @@ void list_test(){
     std::cout<<" Test : "<<std::endl;
     for(int i = 1; i <= 20 ; i++) {
         std::cout<<i<<". ";
-        tmp_add[i-1] = testList->add_elements(70000);
-        tmp_remove[i-1] = testList->clear(70000);
+        tmp_add[i-1] = testList->add_elements(c);
+        tmp_remove[i-1] = testList->clear(c);
         std::cout<<std::endl;
     }
 
@@ -503,7 +688,7 @@ void list_test(){
 //    for(int i = 1; i <= 20 ; i++) {
 //        std::cout<<i<<"/20";
 //
-//        tmp_search[i-1] = testList->search_element(70000);
+//        tmp_search[i-1] = testList->search_element(c);
 //
 //        std::cout<<std::endl;
 //    }
@@ -523,14 +708,18 @@ void heap_test(){
 
     auto * testHeap = new Test_heap();
 
+    std::cout<<"Podaj ilość elementów:";
+    int c;
+    std::cin >> c;
+
 //    int tmp_remove[20];
 //    int tmp_add[20];
 //
 //    std::cout<<" Test : "<<std::endl;
 //    for(int i = 1; i <= 20 ; i++) {
 //        std::cout<<i<<"/20";
-//        tmp_add[i-1] = testHeap->add_test(70000);
-//        tmp_remove[i-1] =testHeap->clear_test(70000);
+//        tmp_add[i-1] = testHeap->add_test(c);
+//        tmp_remove[i-1] =testHeap->clear_test(c);
 //        std::cout<<std::endl;
 //    }
 //
@@ -544,12 +733,13 @@ void heap_test(){
 //    }
 //
 //    std::cout<< "Dodawanie "<< sum_add/20 << "[ms] " << "Usuwanie "<< sum_rev/20 << " [ms]";
+
     int tmp_search[20];
     std::cout<<" Test : "<<std::endl;
     for(int i = 1; i <= 20 ; i++) {
         std::cout<<i<<"/20";
 
-        tmp_search[i-1] = testHeap->search_test(70000);
+        tmp_search[i-1] = testHeap->search_test(c);
 
         std::cout<<std::endl;
     }
@@ -567,14 +757,18 @@ void bst_test(){
 
     auto * testBst = new Test_bst();
 
+    std::cout<<"Podaj ilość elementów:";
+    int c;
+    std::cin >> c;
+
 //    int tmp_remove[20];
 //    int tmp_add[20];
 //
 //    std::cout<<" Test : "<<std::endl;
 //    for(int i = 1; i <= 20 ; i++) {
 //        std::cout<<i<<"/20";
-//        tmp_add[i-1] = testBst->add_test(10000);
-//        tmp_remove[i-1] =testBst->clear_test(10000);
+//        tmp_add[i-1] = testBst->add_test(65000);
+//        tmp_remove[i-1] =testBst->clear_test(65000);
 //        std::cout<<std::endl;
 //    }
 //    float sum_add = 0, sum_rev = 0;
@@ -588,13 +782,13 @@ void bst_test(){
 //
 //    std::cout<< "Dodawanie "<< sum_add/20 << "[ms] " << "Usuwanie "<< sum_rev/20 << " [ms]";
 
-
+//
 //    int tmp_dsw[20];
 //    std::cout<<" Test : "<<std::endl;
 //    for(int i = 1; i <= 20 ; i++) {
 //        std::cout<<i<<"/20";
 //
-//        tmp_dsw[i-1] = testBst->dsw_test(70000);
+//        tmp_dsw[i-1] = testBst->dsw_test(55000);
 //
 //        std::cout<<std::endl;
 //    }
@@ -603,14 +797,14 @@ void bst_test(){
 //
 //    for(int i = 0; i < 20; i++) sum_dsw += tmp_dsw[i];
 //
-//    std::cout << "Alg DSW : " << sum_dsw/20 << " [us]" << std::endl;
+//    std::cout << "Alg DSW : " << sum_dsw/20 << " [ms]" << std::endl;
 
     int tmp_search[20];
     std::cout<<" Test : "<<std::endl;
     for(int i = 1; i <= 20 ; i++) {
         std::cout<<i<<"/20";
 
-        tmp_search[i-1] = testBst->search_test(70000);
+        tmp_search[i-1] = testBst->search_test(c);
 
         std::cout<<std::endl;
     }
@@ -619,7 +813,7 @@ void bst_test(){
 
     for(int i = 0; i < 20; i++) sum_dsw += tmp_search[i];
 
-    std::cout << "Szukanie : " << sum_dsw/20 << " [ns]" << std::endl;
+    std::cout << "Szukanie : " << sum_dsw/20 << " [us]" << std::endl;
 
     delete testBst;
 }
@@ -629,42 +823,46 @@ void rb_test(){
 
     auto * testrbt = new Test_rbt();
 
-//    int tmp_remove[20];
-//    int tmp_add[20];
-//
-//    std::cout<<" Test : "<<std::endl;
-//    for(int i = 1; i <= 20 ; i++) {
-//        std::cout<<i<<"/20";
-//        tmp_add[i-1] = testrbt->add_test(70000);
-//        tmp_remove[i-1] =testrbt->clear_test(70000);
-//        std::cout<<std::endl;
-//    }
-//    float sum_add = 0, sum_rev = 0;
-//
-//    for(int i = 0; i < 20; i++){
-//
-//        sum_add += tmp_add[i];
-//        sum_rev += tmp_remove[i];
-//
-//    }
-//
-//    std::cout<< "Dodawanie "<< sum_add/20 << "[ms] " << "Usuwanie "<< sum_rev/20 << " [ms]";
+    std::cout<<"Podaj ilość elementów:";
+    int c;
+    std::cin >> c;
 
-    int tmp_search[20];
+    int tmp_remove[20];
+    int tmp_add[20];
+
     std::cout<<" Test : "<<std::endl;
     for(int i = 1; i <= 20 ; i++) {
         std::cout<<i<<"/20";
-
-        tmp_search[i-1] = testrbt->search_test(70000);
-
+        tmp_add[i-1] = testrbt->add_test(c);
+        tmp_remove[i-1] =testrbt->clear_test(c);
         std::cout<<std::endl;
     }
+    float sum_add = 0, sum_rev = 0;
 
-    float sum_search = 0;
+    for(int i = 0; i < 20; i++){
 
-    for(int i = 0; i < 20; i++) sum_search += tmp_search[i];
+        sum_add += tmp_add[i];
+        sum_rev += tmp_remove[i];
 
-    std::cout << "Szaukanie : " << sum_search/20 << " [us]" << std::endl;
+    }
+
+    std::cout<< "Dodawanie "<< sum_add/20 << "[ms] " << "Usuwanie "<< sum_rev/20 << " [ms]";
+
+//    int tmp_search[20];
+//    std::cout<<" Test : "<<std::endl;
+//    for(int i = 1; i <= 20 ; i++) {
+//        std::cout<<i<<"/20";
+//
+//        tmp_search[i-1] = testrbt->search_test(70000);
+//
+//        std::cout<<std::endl;
+//    }
+//
+//    float sum_search = 0;
+//
+//    for(int i = 0; i < 20; i++) sum_search += tmp_search[i];
+//
+//    std::cout << "Szaukanie : " << sum_search/20 << " [us]" << std::endl;
 
     delete testrbt;
 

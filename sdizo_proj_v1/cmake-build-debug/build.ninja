@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/danie/Desktop/sdizo_proj_v1/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target sdizo_proj_v1
 
@@ -49,85 +49,85 @@ cmake_ninja_workdir = C$:/Users/danie/Desktop/sdizo_proj_v1/cmake-build-debug/
 
 build cmake_object_order_depends_target_sdizo_proj_v1: phony || CMakeFiles/sdizo_proj_v1.dir
 
-build CMakeFiles/sdizo_proj_v1.dir/application/main.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/application/main.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/application/main.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/application/main.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\application\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\application
 
-build CMakeFiles/sdizo_proj_v1.dir/tablica_dym/Array.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/tablica_dym/Array.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/tablica_dym/Array.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/tablica_dym/Array.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\tablica_dym\Array.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\tablica_dym
 
-build CMakeFiles/sdizo_proj_v1.dir/kopiec_bin/Heap.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/kopiec_bin/Heap.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/kopiec_bin/Heap.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/kopiec_bin/Heap.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\kopiec_bin\Heap.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\kopiec_bin
 
-build CMakeFiles/sdizo_proj_v1.dir/lista_dwu/Node.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/lista_dwu/Node.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/lista_dwu/Node.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/lista_dwu/Node.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\lista_dwu\Node.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\lista_dwu
 
-build CMakeFiles/sdizo_proj_v1.dir/lista_dwu/DoubleList.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/lista_dwu/DoubleList.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/lista_dwu/DoubleList.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/lista_dwu/DoubleList.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\lista_dwu\DoubleList.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\lista_dwu
 
-build CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/bst_tree/BST.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/bst_tree/BST.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\bst_tree\BST.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\bst_tree
 
-build CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST_Node.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/bst_tree/BST_Node.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/bst_tree/BST_Node.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/bst_tree/BST_Node.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\bst_tree\BST_Node.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\bst_tree
 
-build CMakeFiles/sdizo_proj_v1.dir/black_and_red_tree/RBT.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/black_and_red_tree/RBT.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/black_and_red_tree/RBT.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/black_and_red_tree/RBT.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\black_and_red_tree\RBT.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\black_and_red_tree
 
-build CMakeFiles/sdizo_proj_v1.dir/black_and_red_tree/RB_Node.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/black_and_red_tree/RB_Node.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/black_and_red_tree/RB_Node.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/black_and_red_tree/RB_Node.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\black_and_red_tree\RB_Node.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\black_and_red_tree
 
-build CMakeFiles/sdizo_proj_v1.dir/tests/Test_array.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/tests/Test_array.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/tests/Test_array.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/tests/Test_array.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\tests\Test_array.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\tests
 
-build CMakeFiles/sdizo_proj_v1.dir/tests/Test_list.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/tests/Test_list.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/tests/Test_list.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/tests/Test_list.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\tests\Test_list.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\tests
 
-build CMakeFiles/sdizo_proj_v1.dir/tests/Test_heap.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/tests/Test_heap.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/tests/Test_heap.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/tests/Test_heap.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\tests\Test_heap.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\tests
 
-build CMakeFiles/sdizo_proj_v1.dir/tests/Test_bst.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/tests/Test_bst.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/tests/Test_bst.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/tests/Test_bst.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\tests\Test_bst.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
   OBJECT_FILE_DIR = CMakeFiles\sdizo_proj_v1.dir\tests
 
-build CMakeFiles/sdizo_proj_v1.dir/tests/Test_rbt.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/Desktop/sdizo_proj_v1/tests/Test_rbt.cpp || cmake_object_order_depends_target_sdizo_proj_v1
+build CMakeFiles/sdizo_proj_v1.dir/tests/Test_rbt.cpp.obj: CXX_COMPILER__sdizo_proj_v1_Debug C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/tests/Test_rbt.cpp || cmake_object_order_depends_target_sdizo_proj_v1
   DEP_FILE = CMakeFiles\sdizo_proj_v1.dir\tests\Test_rbt.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++11
   OBJECT_DIR = CMakeFiles\sdizo_proj_v1.dir
@@ -156,7 +156,7 @@ build sdizo_proj_v1.exe: CXX_EXECUTABLE_LINKER__sdizo_proj_v1_Debug CMakeFiles/s
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\danie\Desktop\sdizo_proj_v1\cmake-build-debug && "D:\Clion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D C:\Users\danie\OneDrive\Pulpit\sdizo_proj_v1\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -167,7 +167,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\danie\Desktop\sdizo_proj_v1\cmake-build-debug && "D:\Clion\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\danie\Desktop\sdizo_proj_v1 -BC:\Users\danie\Desktop\sdizo_proj_v1\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D C:\Users\danie\OneDrive\Pulpit\sdizo_proj_v1\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2022.3.2\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\danie\OneDrive\Pulpit\sdizo_proj_v1 -BC:\Users\danie\OneDrive\Pulpit\sdizo_proj_v1\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -185,7 +185,7 @@ build sdizo_proj_v1: phony sdizo_proj_v1.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/danie/Desktop/sdizo_proj_v1/cmake-build-debug
+# Folder: C:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/cmake-build-debug
 
 build all: phony sdizo_proj_v1.exe
 
@@ -196,14 +196,14 @@ build all: phony sdizo_proj_v1.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Users/danie/Desktop/sdizo_proj_v1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeRCCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeRCInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-windres.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeRCCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Users/danie/Desktop/sdizo_proj_v1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeRCCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeRCInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C-ABI.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX-ABI.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-windres.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows.cmake D$:/Clion/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2022.3.2/bin/cmake/win/x64/share/cmake-3.25/Modules/Platform/WindowsPaths.cmake C$:/Users/danie/OneDrive/Pulpit/sdizo_proj_v1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.25.2/CMakeCCompiler.cmake CMakeFiles/3.25.2/CMakeCXXCompiler.cmake CMakeFiles/3.25.2/CMakeRCCompiler.cmake CMakeFiles/3.25.2/CMakeSystem.cmake: phony
 
 
 #############################################
